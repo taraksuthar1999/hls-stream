@@ -142,8 +142,6 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
         const video = document.getElementById('video')
         const sub = document.getElementById('track')
         const videoSrc = '/video/output.m3u8'
-        const subSrc = '/vtt/subs.vtt'
-        sub.src = subSrc
         if(Hls.isSupported()){
             const hls = new Hls();
             // const hls1 = new Hls();
@@ -166,11 +164,6 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
         }else if(video.canPlayType('application/vnd.apple.mpegurl')){
             alert('sss')
             video.src =videoSrc;
-            sub.src = subSrc;
-            sub.addEventListener("load", function() {
-                this.mode = "showing";
-                video.textTracks[0].mode = "showing";
-            });
             video.addEventListener('loadedmetadata',()=>{
                 video.play();
             })
