@@ -1,7 +1,7 @@
 const ffmpeg = require('fluent-ffmpeg')
 const ffmpegInstaller = require('@ffmpeg-installer/ffmpeg')
 ffmpeg.setFfmpegPath(ffmpegInstaller.path)
-ffmpeg('stream/Demon-slayer-ep.mkv',{timeout:432000}).addOptions(['-profile:v baseline',
+ffmpeg('assets/Demon Slayer.mkv',{timeout:432000}).addOptions(['-profile:v baseline',
 '-level 3.0',
 '-start_number 0',
 '-hls_time 10',
