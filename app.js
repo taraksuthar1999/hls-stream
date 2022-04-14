@@ -4,7 +4,7 @@ const hls = require('hls-server')
 const app = new express()
 const port = process.env.PORT || 3080
 app.get('/',(req,res)=>{
-    res.sendFile('C:/javascript/hls-stream/public/anime.html')
+    res.sendFile(__dirname+'/public/anime.html')
 })
 const server = app.listen(port,()=>{
     console.log('server started on port '+port);
